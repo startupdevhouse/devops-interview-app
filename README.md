@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start this app on production environment:
 
-Things you may want to cover:
+1. Create database by rake db:create command or using postgres
 
-* Ruby version
+To connect database to the application you need to set ENV variables, example below:
 
-* System dependencies
+POSTGRES_PASSWORD=password
+POSTGRES_USER=user
+POSTGRES_DB=db_name
+DATABASE_HOST=database_host
+DATABASE_PORT=5432
+DATABASE_SOCKET=
 
-* Configuration
+2. Run `rake db:migrate` to create database tables
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
