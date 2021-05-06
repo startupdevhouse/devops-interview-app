@@ -1,0 +1,23 @@
+<br>
+
+<p> New ticket: </p>
+
+<%= form_with model: ticket do |form| %>
+  <p>
+    <%= form.label :name, "Name" %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :price, "Price" %>
+    <%= form.number_field :price %>
+  </p>
+  <%= form.submit %>
+<% end %>
+
+<br>
+
+<p> Tickets list: </p>
+
+<% Ticket.all.each do |ticket| %>
+  <p> <%= ticket.name %> <%= ticket.price %> </p>
+<% end %>
